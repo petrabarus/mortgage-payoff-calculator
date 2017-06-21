@@ -1,0 +1,29 @@
+{
+    "name": "mortgage-payoff-calculator",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/petrabarus/mortgage-payoff-calculator.git"
+    },
+    "author": "Petra Barus <petra.barus@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/petrabarus/mortgage-payoff-calculator/issues"
+    },
+    "homepage": "https://github.com/petrabarus/mortgage-payoff-calculator#readme",
+    "devDependencies": {
+        "eslint": "4.0.0",
+        "eslint-config-airbnb": "15.0.1",
+        "eslint-plugin-react": "7.1.0",
+        "react": "15.6.1",
+        "react-bootstrap": "0.31.0",
+        "react-dom": "15.6.1"
+    },
+    "dependencies": {
+    }
+}
