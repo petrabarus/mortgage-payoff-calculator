@@ -11,5 +11,21 @@ cache:
     directories:
         - node_modules
 
+before_script:
+    - mkdir build
+
 script:
     - echo "Hello World!"
+    - cp src/index.html build
+
+deploy:
+    provider: s3
+    access_key_id:
+        secure: "EB+EyQpD5c+Xhb9Gn6mt7+i2U/AH4021zzJCJKmG/BaJ7/PYk3OmKv7K8sRlq7q60Ge/7jBa2jJjjGfyjJ4+p1ZbNs4OMQumLrE2Nu1+ck8JHCNb16m5BRgW3Yi+07LjZj6P4vj3V3Y+SfYQ5XfvPYPUBEKmHZorjUJRSvCet3XvIBVgoBNUen1xSHNjte1I1fQkLC9FxwtcE0C3Zdslqx9ylojNenmmnFzQcuSpyC2o2yPaogKEANgZHSo1ZXL43xdquhgHyDE+iAOgbD3IzgPf55TpXhtssLVsCc2Z+ZQXon0o5PJ4xtw0eYAl86koRjHZngyg5iXRSAJED1qLy3Nha0GCDVXmYL6/FiehTi3idU03P4aXfeR0Y6xhyZOaW5awJ7BMA0AuU+Bwg+gcTzKkzcJAKy9voikH/N74jVDAZxS1g2WOARIca5j/IWrGodrrDucRbnPizzGwZzaM7mMIq5l8ZzI2DS7EKKOh4aRMzomXZEP1zugCElse9AygLZ8wwG5wfcDbQrat1YgVg8jYdMmQFvFKMucD1navUj+51j80pWfgqd2xBH+X3QYYHpFYwumDh4PqmOhLrWuC7IVuqnD8KE51CAdUSILwaZ3UdvLnkpN/6OOEaHODfNrp6iyg90QXPpma+dml/eDDblX+HdMj5tlYtHLPBdbjobM="
+    secret_access_key:
+        secure: "WqRFkSZHi85acjzrQUyGJYKEmNMebvdb8ZY2krkITHdS08SCMiqXVP14Vz4SBJRWZGTcYIhqucvdBJW6YMx1LX++PrzvTMOPGKv3KZxmn0huhbsnY7f9HtYNTekY/Q9aX5MUGeOfRSsT0ShdCNJHt8FIl9MhiMJa0y0tDL2br8NrfKurluzpqczP1SOdOUB8qVWbosATy0ZIbj0tIVNDwRejPDkya+lwAOC7QwT6st0BwJ36KTFcw9JlZWHfRLyAKvZKDJKuPqWNNyKI0ZGXao4CHgV7XgSBSg7s75u33Rzes/4Go42YrZzXkTwqEE1Zpgo37Rj+8X4MxVaBk9ewQsGQhD3OhT4LT+tLTlnYMKCyzJo+LXLGon6ovbKu1kPfga+aLsazXRkse1w0ULvs+ZFvEz0N6FhCIqsri4irHWXcOpMQWRoos6daMM+Fa+UxVveFSKVLxnDfoTKY/JD9JMhrusT8iXe33sRhCyph+dND/rq73ZseJDVYYogeVf2EYTg1+069CyWkVftexVmK8pm8ztXOJOs6nS6shmgZurk69/G0dd4ASJE9qjAAxeRm6Y0xe7lwkJhhEHG1K+ml5b/hOqZ8oHSGxkwqNR8q163Gx1OfcC3KSUyni6f/0R6p4ido+U4MvDerkE9W9dV2dTpPRw+I0kCKZwOM2crfYNk="
+    bucket:
+        secure: "dmH2DH8GRVYqozIgbLfq/z6fd8g5W12GMuzGupLg68wFt5HvtCwf2PaTM7UOVURoVKHS8BIT3EEJH9g+yP6ZBOpYjxdw3edOuzuQH4fNoplyWcSg6UY1hCXoiioQ/0tMK+JGdkkpeU5NhqZ+xT65XZPiVwsLBA8o/lYBGGCNfbmCy2EJ7UIX3FWe6EbBpAaCs1qcmV4+lCdIvxHBWk7Hcg6gNn1VOVauNpwKTfjCn4yOfwleIHueJF7pvmUx6ri1LB98Jn4aKzuV5aglVZ0+616YjvpdOrUbSRfSrEwDu+4xIA80WL+L4YAZYmJWakCP0abOv7mXs2ppdvaELAnS5i6a44msqlqyG1gQTQVYV0X0RaOqg6loJG40UmY60Vs4C+Pv+uRsEfUsMjzvOeGKZt1vuNYfNF9cB36b0YfVBQWpsAfF2eMM9oZ0CYQXo3wlwxaGuWukLcwbKvYFs9Yuf8wpQETswibkL4KAw4tKKzo0+5pWydX84xTZtGaAAca6QoiyE0L9TRobHUKADBWG6XhgrrfPH7SGH/XDS2rHMfyDR81L/qQf3CxfVaCh7D4u0tCLk1w1E+SNpigv1vp81BXsHtsmd2PNzrk1haGjSCK3Be0Ysoyv+c6k9IAX75TBxamCAoGK3sBlSm5zjDueCT5KT5LU5nUsX/BLy64by/M="
+    acl: public_read
+    region: ap-southeast-1
+    local_dir: build
