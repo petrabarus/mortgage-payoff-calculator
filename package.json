@@ -17,6 +17,7 @@
     },
     "homepage": "https://github.com/petrabarus/mortgage-payoff-calculator#readme",
     "devDependencies": {
+        "codecov": "^1.0.1",
         "eslint": "4.0.0",
         "eslint-config-airbnb": "15.0.1",
         "eslint-plugin-react": "7.1.0",
